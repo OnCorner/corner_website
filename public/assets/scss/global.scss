@@ -83,9 +83,9 @@ body {
   height: 'auto';
 }
 
-input {
-  outline:none;
-}
+// input {
+//   outline:none;
+// }
 
 .inputNormal {
   background-color: rgba(255,255,255,0.1);
@@ -93,17 +93,16 @@ input {
   outline: 0;
   border-radius:0;
   width: 150px;
-  height: 30px;
+  height: 12px;
   padding: 12px;
   box-shadow: none;
   color: rgba(255,255,255,0.9);
   font-family: HelveticaNeue-Light;
   font-size: 13px;
-  &:focus {
-    outline: none;
-    outline-width: 0;
-
-  }
+  // &:focus {
+  //   outline: none;
+  //   outline-width: 0;
+  // }
 }
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html

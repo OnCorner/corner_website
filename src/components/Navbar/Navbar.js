@@ -72,7 +72,7 @@ export default class Navbar extends React.Component {
           onChange={this.emailChange.bind(this)}
           value={st.email}
         />
-        {st.invalidEmail ? this.renderEmailError() : null}
+        {/*{st.invalidEmail ? this.renderEmailError() : null}*/}
         {st.buttonAppear && st.email != '' ?
           <img
             className="pigeonEmoji"

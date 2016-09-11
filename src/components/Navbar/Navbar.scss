@@ -5,9 +5,9 @@
   background-color: black;
   display: flex;
   justify-content: space-around;
-  padding: 10px 20px;
   position: relative;
   overflow: hidden;
+  align-items: center;
 
   .logo {
     line-height: 57px;
@@ -17,18 +17,13 @@
     font-family: 'NewEnglishTowne';
   }
 
-  #wave-emoji:after {
-    content: "\01F30A";
-    font-size: 50px;
-  }
-
   .pigeonEmoji {
     padding:0;
     font-size: 100px;
     position: absolute;
     right: 0;
     top: 0;
-    right: -13px;
+    right: -27px;
     top: 0;
     cursor: pointer;
     width: 90px;
