@@ -1,0 +1,45 @@
+@import "~assets/scss/vars.scss";
+
+.navbarContainer {
+  height: 57px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+  position: relative;
+  overflow: hidden;
+
+  .logo {
+    line-height: 57px;
+    font-size: 32px;
+    color: #AD985E;
+    font-weight: 100;
+    font-family: 'NewEnglishTowne';
+  }
+
+  #wave-emoji:after {
+    content: "\01F30A";
+    font-size: 50px;
+  }
+
+  .pigeonEmoji {
+    background: purple;
+    border:0;
+    box-shadow:0;
+    outline:0;
+    padding:0;
+    font-size: 100px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 78px;
+    top: -17px;
+    cursor: pointer;
+  }
+
+  .pigeonEmoji:before {
+    content: "\01F426";
+  }
+}

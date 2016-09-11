@@ -1,0 +1,203 @@
+// font imports
+// @import url("https://fonts.googleapis.com/css?family=Lato:400,100,300italic,300,100italic,400italic,700,700italic,900,900italic");
+// @import url("https://fonts.googleapis.com/css?family=Oswald:400,300,700");
+// @import "vars";
+// @import "normalize";
+// @import "grid";
+// @import "utility";
+// @import "text";
+// @import "components";
+
+// body {
+//   background-color: $colorThree;
+//   background: $colorThree;
+//   color: $textOne;
+// }
+
+// h1, h2, h3, h4, h5, h6, p, small, title { margin: 0; }
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0;
+  background-color: grey;
+}
+
+@font-face {
+    font-family: 'NewEnglishTowne';
+    font-style: normal;
+    src: url('/assets/fonts/NewEnglishTowne.ttf');
+}
+
+.snackStyle div div span{
+  color: #88898C;
+}
+
+.snackStyleTwo div div span{
+  color: #E65100;
+}
+
+.disqus_thread{
+  padding: 50px;
+}
+
+.thread_body{
+  padding-right: 370px;
+  padding-left: 370px;
+}
+
+.login_div
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 3px;
+}
+
+.carousel {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.crop {
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+}
+.crop img {
+  height: auto;
+  width: 400px;
+}
+
+.logoImage {
+  height: 'auto';
+}
+
+.inputNormal {
+  background-color: rgba(255,255,255,0.1);
+  border: 0;
+  border-radius:0;
+  width: 150px;
+  height: 30px;
+  padding: 12px;
+  box-shadow: none;
+  color: rgba(255,255,255,0.9);
+  font-family: HelveticaNeue-Light;
+  font-size: 13px;
+}
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+/* ============================================================
+  DEMO 4 - FULL SCREEN BACKGROUND VIDEO
+============================================================ */
+#cmn-video-demo4__video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#cmn-video-demo4__content {
+  text-align: center;
+}
+
+.cmn-video-demo4__content--header {
+  margin-bottom: 40px;
+}
+.cmn-video-demo4__content--header h2,
+.cmn-video-demo4__content--header p,
+.cmn-video-demo4__content--header a {
+  color: #fff;
+  text-shadow: -1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+.cmn-video-demo4__content--header h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+.cmn-video-demo4__content--header p {
+  margin-bottom: 40px;
+}
+.cmn-video-demo4__content--header a {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  font-family: "Roboto Slab", serif;
+  border: solid 1px #fff;
+  -webkit-transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+  -moz-transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+  -o-transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+  transition: background 0.3s, color 0.3s, text-shadow 0.3s;
+}
+.cmn-video-demo4__content--header a:hover {
+  background-color: #fff;
+  color: #787878;
+  text-shadow: none;
+}
+
+.cmn-video-demo4__content--main {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.cmn-video-demo4__content--main h2 {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+}
+.cmn-video-demo4__content--main p {
+  margin: 0 0 20px 0;
+  color: #fff;
+}
+
+@media all and (min-width: 600px) {
+  .cmn-video-demo4__content--header h2 {
+    font-size: 42px;
+  }
+  .cmn-video-demo4__content--header p,
+  .cmn-video-demo4__content--header a {
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .cmn-video-demo4__content--header h2 {
+    font-size: 54px;
+  }
+  .cmn-video-demo4__content--header p,
+  .cmn-video-demo4__content--header a {
+    font-size: 24px;
+  }
+}
