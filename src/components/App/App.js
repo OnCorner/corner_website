@@ -22,6 +22,7 @@ export default class App extends React.Component {
     return Api.db.create('splashinfo', {email: email})
     .then((newUser) => {
       this.setState({subscribeSuccess: true});
+      return newUser;
     });
   }
 

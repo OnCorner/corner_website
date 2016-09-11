@@ -2,7 +2,7 @@ import s from 'Homepage/Homepage.scss'
 
 export default class Homepage extends React.Component {
   static propTypes = {
-    subscribeSuccess: React.PropTypes.bool.isRequired,
+    subscribeSuccess: React.PropTypes.bool,
   }
 
   constructor(props) {
@@ -31,11 +31,11 @@ export default class Homepage extends React.Component {
 
     // console.log("This is subscribeSuccess ", pr.subscribeSuccess);
 
-    console.log(pr)
+    console.log("pr.subscribeSuccess", pr.subscribeSuccess)
 
     return (
       <div className="homepageContainer">
-      {/* { pr.subscribeSuccess ?
+      {/*{ pr.subscribeSuccess ?
           <video id="cmn-video-demo4__video" autoPlay loop>
             <source src="/assets/media/soho-vid.mp4" type="video/mp4"/>
             <source src="/assets/media/soho-vid.ogv" type="video/ogg"/>
@@ -48,6 +48,12 @@ export default class Homepage extends React.Component {
             <source src="/assets/media/tv-test.webm" type="video/webm"/> Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
           </video>
         }*/}
+        {
+          pr.subscribeSuccess ?
+          <div>Show video 2! pr.subscribeSuccess: {pr.subscribeSuccess.toString()}</div>
+          :
+          <div>Show video 1! pr.subscribeSuccess: {pr.subscribeSuccess.toString()}</div>
+        }
         <video id="cmn-video-demo4__video" autoPlay muted loop>
           <source src="/assets/media/soho-vid.mp4" type="video/mp4"/>
           <source src="/assets/media/soho-vid.ogv" type="video/ogg"/>
