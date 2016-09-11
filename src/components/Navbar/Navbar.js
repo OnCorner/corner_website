@@ -1,5 +1,6 @@
 import s from 'Navbar/Navbar.scss'
 import Api from 'modules/Api.js'
+import Utility from 'modules/Utility.js'
 
 export default class Navbar extends React.Component {
   static propTypes = {
@@ -11,25 +12,40 @@ export default class Navbar extends React.Component {
 
     this.state = {
       buttonAppear: false,
-      email: ''
+      email: '',
+      invalidEmail: false
     }
   }
 
   componentDidMount() {
   }
 
-  showButton(event) {
+  emailChange(event) {
     this.setState({
       email: event.target.value,
-      buttonAppear: true
+      buttonAppear: true,
+      invalidEmail: false
     })
   }
 
   pigeonClick() {
-    Api.db.create('splashinfo', {email: this.state.email})
+    var email = this.state.email;
+    if(!Utility.isEmail(email)) {
+      console.log("invalid email");
+      this.setState({invalidEmail: true});
+      return;
+    }
+
+    Api.db.create('splashinfo', {email: email})
     .then((user) => {
       console.log("new user", user);
     });
+  }
+
+  renderEmailError() {
+    return (
+      null
+    );
   }
 
   renderAlert() {
@@ -52,9 +68,10 @@ export default class Navbar extends React.Component {
         <input
           className="inputNormal"
           placeholder='Enter Email'
-          onChange={this.showButton.bind(this)}
+          onChange={this.emailChange.bind(this)}
           value={st.email}
         />
+        {st.invalidEmail ? this.renderEmailError() : null}
         {st.buttonAppear && st.email != '' ?
           <button
             className="pigeonEmoji"
