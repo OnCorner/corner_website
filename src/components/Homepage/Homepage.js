@@ -1,5 +1,9 @@
 import s from 'Homepage/Homepage.scss'
 
+function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+
 export default class Homepage extends React.Component {
   static propTypes = {
     subscribeSuccess: React.PropTypes.bool,
@@ -50,9 +54,18 @@ export default class Homepage extends React.Component {
         }*/}
         {
           pr.subscribeSuccess ?
-          <div>Show video 2! pr.subscribeSuccess: {pr.subscribeSuccess.toString()}</div>
-          :
+
           <div>Show video 1! pr.subscribeSuccess: {pr.subscribeSuccess.toString()}</div>
+          :
+          <iframe
+            className="endVideo"
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/Y1PX9i3u89c?autoplay=1&autohide=1&controls=0&modestbranding=1&rel=0&showinfo=0"
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen
+          ></iframe>
         }
         <video id="cmn-video-demo4__video" autoPlay muted loop>
           <source src="/assets/media/soho-vid.mp4" type="video/mp4"/>

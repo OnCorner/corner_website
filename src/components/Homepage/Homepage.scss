@@ -1,5 +1,10 @@
 @import "~assets/scss/vars.scss";
 
 .homepageContainer {
-
+  .endVideo {
+    overflow: hidden;
+    height: calc(100vh + 50px);
+    width: 100%;
+    margin-bottom: -50px;
+  }
 }
