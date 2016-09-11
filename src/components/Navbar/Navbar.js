@@ -73,8 +73,9 @@ export default class Navbar extends React.Component {
         />
         {st.invalidEmail ? this.renderEmailError() : null}
         {st.buttonAppear && st.email != '' ?
-          <button
+          <img
             className="pigeonEmoji"
+            src="/assets/img/pigeon.png"
             onClick={this.pigeonClick.bind(this)}
           />
           : null
