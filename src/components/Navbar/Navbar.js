@@ -36,9 +36,10 @@ export default class Navbar extends React.Component {
       return;
     }
 
-    Api.db.create('splashinfo', {email: email})
+    this.props.saveUserEmail(email)
     .then((user) => {
       console.log("new user", user);
+      this.setState({email: ''});
     });
   }
 

@@ -2,7 +2,7 @@ import s from 'Homepage/Homepage.scss'
 
 export default class Homepage extends React.Component {
   static propTypes = {
-    // dummy: React.PropTypes.object.isRequired,
+    subscribeSuccess: React.PropTypes.bool.isRequired,
   }
 
   constructor(props) {
@@ -29,12 +29,29 @@ export default class Homepage extends React.Component {
     var st = this.state;
     var pr = this.props;
 
+    // console.log("This is subscribeSuccess ", pr.subscribeSuccess);
+
+    console.log(pr)
+
     return (
       <div className="homepageContainer">
+      {/* { pr.subscribeSuccess ?
+          <video id="cmn-video-demo4__video" autoPlay loop>
+            <source src="/assets/media/soho-vid.mp4" type="video/mp4"/>
+            <source src="/assets/media/soho-vid.ogv" type="video/ogg"/>
+            <source src="/assets/media/soho-vid.webm" type="video/webm"/> Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+          </video>
+          :
+          <video id="cmn-video-demo4__video" autoPlay muted loop>
+            <source src="/assets/media/tv-test.mp4" type="video/mp4"/>
+            <source src="/assets/media/tv-test.ogv" type="video/ogg"/>
+            <source src="/assets/media/tv-test.webm" type="video/webm"/> Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+          </video>
+        }*/}
         <video id="cmn-video-demo4__video" autoPlay muted loop>
-          <source src="/assets/media/tv-test.mp4" type="video/mp4"/>
-          <source src="/assets/media/tv-test.ogv" type="video/ogg"/>
-          <source src="/assets/media/tv-test.webm" type="video/webm"/> Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+          <source src="/assets/media/soho-vid.mp4" type="video/mp4"/>
+          <source src="/assets/media/soho-vid.ogv" type="video/ogg"/>
+          <source src="/assets/media/soho-vid.webm" type="video/webm"/> Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
         </video>
       </div>
     )

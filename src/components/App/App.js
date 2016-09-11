@@ -11,10 +11,18 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
+      subscribeSuccess: false
     }
   }
 
   componentDidMount() {
+  }
+
+  saveUserEmail(email) {
+    return Api.db.create('splashinfo', {email: email})
+    .then((newUser) => {
+      this.setState({subscribeSuccess: true});
+    });
   }
 
   render() {
@@ -22,10 +30,17 @@ export default class App extends React.Component {
     var pr = this.props;
 
     var props = {};
+    props.subscribeSuccess = st.subscribeSuccess;
 
     return (
       <div className="appContainer">
-        <Navbar />
+        { st.subscribeSuccess ? null
+          :
+          <Navbar
+            saveUserEmail={this.saveUserEmail.bind(this)}
+          />
+        }
+
         {React.Children.map(pr.children, function(child) {
           return React.cloneElement(child, props);
         })}
