@@ -7,4 +7,25 @@
     width: 100%;
     margin-bottom: -50px;
   }
+
+  .startVideo {
+    overflow: hidden;
+    height: calc(100vh + 50px - 57px);
+    width: 100%;
+    margin-bottom: -50px;
+  }
+
+  .overlayNoPause {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .noClickContainer {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
 }
