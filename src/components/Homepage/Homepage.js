@@ -80,6 +80,11 @@ export default class Homepage extends React.Component {
             ></iframe>
           </div>
         }
+        {/*<video id="cmn-video-demo4__video" autoPlay muted loop>
+          <source src="/assets/media/tv-test.mp4" type="video/mp4"/>
+          <source src="/assets/media/tv-test.ogv" type="video/ogg"/>
+          <source src="/assets/media/tv-test.webm" type="video/webm"/> Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+        </video>*/}
       </div>
     )
   }
