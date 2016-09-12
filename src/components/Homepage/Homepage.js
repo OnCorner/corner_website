@@ -1,8 +1,12 @@
 import s from 'Homepage/Homepage.scss'
 
+function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+
 export default class Homepage extends React.Component {
   static propTypes = {
-    subscribeSuccess: React.PropTypes.bool.isRequired,
+    subscribeSuccess: React.PropTypes.bool,
   }
 
   constructor(props) {
@@ -31,11 +35,11 @@ export default class Homepage extends React.Component {
 
     // console.log("This is subscribeSuccess ", pr.subscribeSuccess);
 
-    console.log(pr)
+    console.log("pr.subscribeSuccess", pr.subscribeSuccess)
 
     return (
-      <div className="homepageContainer">
-      {/* { pr.subscribeSuccess ?
+      <div className="homepageContainer" style={pr.subscribeSuccess ? null : {marginBottom: "-57px"}}>
+      {/*{ pr.subscribeSuccess ?
           <video id="cmn-video-demo4__video" autoPlay loop>
             <source src="/assets/media/soho-vid.mp4" type="video/mp4"/>
             <source src="/assets/media/soho-vid.ogv" type="video/ogg"/>
@@ -48,11 +52,34 @@ export default class Homepage extends React.Component {
             <source src="/assets/media/tv-test.webm" type="video/webm"/> Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
           </video>
         }*/}
-        <video id="cmn-video-demo4__video" autoPlay muted loop>
-          <source src="/assets/media/soho-vid.mp4" type="video/mp4"/>
-          <source src="/assets/media/soho-vid.ogv" type="video/ogg"/>
-          <source src="/assets/media/soho-vid.webm" type="video/webm"/> Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
-        </video>
+        {
+          pr.subscribeSuccess ?
+          <div className="noClickContainer">
+            <div className="overlayNoPause"></div>
+            <iframe
+              className="endVideo"
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/Y1PX9i3u89c?autoplay=1&autohide=1&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1"
+              frameborder="0"
+              scrolling="no"
+              allowfullscreen
+            ></iframe>
+          </div>
+          :
+          <div className="noClickContainer">
+            <div className="overlayNoPause"></div>
+            <iframe
+              className="startVideo"
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/sng_CdAAw8M?autoplay=1&autohide=1&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1"
+              frameborder="0"
+              scrolling="no"
+              allowfullscreen
+            ></iframe>
+          </div>
+        }
       </div>
     )
   }

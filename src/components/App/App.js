@@ -22,6 +22,7 @@ export default class App extends React.Component {
     return Api.db.create('splashinfo', {email: email})
     .then((newUser) => {
       this.setState({subscribeSuccess: true});
+      return newUser;
     });
   }
 
@@ -34,7 +35,8 @@ export default class App extends React.Component {
 
     return (
       <div className="appContainer">
-        { st.subscribeSuccess ? null
+        { st.subscribeSuccess ?
+          null
           :
           <Navbar
             saveUserEmail={this.saveUserEmail.bind(this)}

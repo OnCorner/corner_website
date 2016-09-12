@@ -39,7 +39,7 @@ export default class Navbar extends React.Component {
     this.props.saveUserEmail(email)
     .then((user) => {
       console.log("new user", user);
-      this.setState({email: ''});
+      // this.setState({email: ''});
     });
   }
 
