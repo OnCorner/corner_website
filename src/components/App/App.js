@@ -35,12 +35,12 @@ export default class App extends React.Component {
 
     return (
       <div className="appContainer">
-        { st.subscribeSuccess ? null
-          :
+        { st.subscribeSuccess ?
           null
-          // <Navbar
-          //   saveUserEmail={this.saveUserEmail.bind(this)}
-          // />
+          :
+          <Navbar
+            saveUserEmail={this.saveUserEmail.bind(this)}
+          />
         }
 
         {React.Children.map(pr.children, function(child) {

@@ -1,16 +1,18 @@
 @import "~assets/scss/vars.scss";
 
 .homepageContainer {
+  margin-bottom: -57px;
+
   .endVideo {
     overflow: hidden;
     height: calc(100vh + 50px);
     width: 100%;
-    margin-bottom: -50px;
+    margin-bottom: -57px;
   }
 
   .startVideo {
     overflow: hidden;
-    height: calc(100vh + 50px - 57px);
+    height: calc(100vh + 50px);
     width: 100%;
     margin-bottom: -50px;
   }
