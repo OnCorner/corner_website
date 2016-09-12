@@ -1,0 +1,13 @@
+@import "~assets/scss/vars.scss";
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  min-width: 100%;
+  background-color: black;
+  z-index: 100;
+  display: flex;
+}

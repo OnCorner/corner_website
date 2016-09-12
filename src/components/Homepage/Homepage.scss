@@ -1,36 +1,18 @@
 @import "~assets/scss/vars.scss";
 
 .homepageContainer {
-  .video {
 
-  }
-  .endVideo {
-    overflow: hidden;
-    height: calc(100vh + 50px);
-    width: 100%;
-    margin-bottom: -50px;
-    margin-top: -25px;
-  }
+}
 
-  .startVideo {
-    overflow: hidden;
-    height: calc(100vh + 50px);
-    width: 100%;
-    margin-bottom: -50px;
-    margin-top: -25px;
-  }
-
-  .overlayNoPause {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .noClickContainer {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-  }
+#testScreenGif {
+  min-height:100%;
+  min-width:100%;
+  height:auto;
+  width:auto;
+  position:absolute;
+  top:-100%;
+  bottom:-100%;
+  left:-100%;
+  right:-100%;
+  margin:auto;
 }

@@ -1,5 +1,6 @@
 import s from 'App/App.scss'
 import Navbar from 'Navbar/Navbar.js'
+import Footer from 'Footer/Footer.js'
 import Api from 'modules/Api.js'
 
 export default class App extends React.Component {
@@ -13,9 +14,6 @@ export default class App extends React.Component {
     this.state = {
       subscribeSuccess: false
     }
-  }
-
-  componentDidMount() {
   }
 
   saveUserEmail(email) {
@@ -35,17 +33,18 @@ export default class App extends React.Component {
 
     return (
       <div className="appContainer">
-        { st.subscribeSuccess ?
-          null
-          :
-          <Navbar
-            saveUserEmail={this.saveUserEmail.bind(this)}
-          />
-        }
+        <Navbar
+          saveUserEmail={this.saveUserEmail.bind(this)}
+          subscribeSuccess={st.subscribeSuccess}
+        />
 
         {React.Children.map(pr.children, function(child) {
           return React.cloneElement(child, props);
         })}
+
+        {st.subscribeSuccess ?
+          null : <Footer/>
+        }
       </div>
     )
   }
