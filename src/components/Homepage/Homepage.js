@@ -38,7 +38,7 @@ export default class Homepage extends React.Component {
     console.log("pr.subscribeSuccess", pr.subscribeSuccess)
 
     return (
-      <div className="homepageContainer">
+      <div className="homepageContainer" style={pr.subscribeSuccess ? null : {marginBottom: "-57px"}}>
       {/*{ pr.subscribeSuccess ?
           <video id="cmn-video-demo4__video" autoPlay loop>
             <source src="/assets/media/soho-vid.mp4" type="video/mp4"/>
