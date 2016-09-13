@@ -16,8 +16,16 @@ export default class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+    Api.db.find('splashinfo', {"email": "xxxxx"})
+    .then((res) => {
+      // do something with res
+    });
+
+  }
+
   saveUserEmail(email) {
-    return Api.db.create('splashinfo', {email: email})
+    return Api.db.create('splashinfo', {email: email.toLowerCase()})
     .then((newUser) => {
       this.setState({subscribeSuccess: true});
       return newUser;
