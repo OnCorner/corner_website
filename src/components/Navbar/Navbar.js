@@ -33,14 +33,12 @@ export default class Navbar extends React.Component {
     if(code === 13 || event.target.id === "pigeon-button") {
       var email = this.state.email;
       if(!Utility.isEmail(email)) {
-        console.log("invalid email");
         this.setState({invalidEmail: true});
         return;
       }
 
       this.props.saveUserEmail(email)
       .then((user) => {
-        console.log("new user", user);
         this.setState({email: ''});
       });
     }

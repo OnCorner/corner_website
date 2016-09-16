@@ -16,7 +16,7 @@ export default class Homepage extends React.Component {
     // console.log("This is subscribeSuccess ", pr.subscribeSuccess);
 
     return (
-      <div className="homepageContainer">
+      <div id="homepageContainer">
         { pr.subscribeSuccess ?
           <video id="fullscreen-video" autoPlay loop>
             <source src="/assets/media/soho-vid.mp4" type="video/mp4"/>
@@ -25,16 +25,8 @@ export default class Homepage extends React.Component {
           </video>
           :
           <img
+            className="test-screen-gif"
             src="/assets/media/test-screen6.gif"
-            style={{
-              minHeight: '100%',
-              minWidth: '100%',
-              width: '100%',
-              height: '100%',
-              position: 'fixed',
-              top: 0,
-              left: 0,
-            }}
           />
         }
         {/*<video id="cmn-video-demo4__video" autoPlay muted loop>
