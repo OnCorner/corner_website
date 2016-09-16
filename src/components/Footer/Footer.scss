@@ -1,6 +1,6 @@
 @import "~assets/scss/vars.scss";
 
-footer {
+#footer {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -10,4 +10,33 @@ footer {
   background-color: black;
   z-index: 100;
   display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 15px;
+
+  .fbicon {
+    width: 17px;
+    height: 17px;
+    image-rendering: auto;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    padding-top: 1px;
+  }
+
+  .igicon {
+    width: 20px;
+    height: 20px;
+    image-rendering: auto;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+  }
+
 }
